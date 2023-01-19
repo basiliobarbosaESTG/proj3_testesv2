@@ -1,6 +1,6 @@
-const express = require("express"); //require
+import express from 'express';//const express = import("express"); //require
 const app = express();
-const database = require("./database") //require
+ //const database = import("./database") 
 
 
 app.set("view engine", "ejs")
