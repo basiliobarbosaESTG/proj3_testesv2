@@ -7,6 +7,13 @@ let administradorController = {
         } catch (error) {
             return res.status(400).json(error)
         }
+    },
+    getAllUtilizadores: async function (req, res) {
+        try {
+            return res.status(200).json(await administradorService.getAllUtilizadores())
+        } catch (error) {
+            return res.status(400).json(error)
+        }
     }
 }
 
