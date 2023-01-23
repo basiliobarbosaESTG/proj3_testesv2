@@ -2,5 +2,16 @@
   "dependencies": {
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*/.{js,jsx}": [
+      "npm run format",
+      "git add"
+    ]
   }
 }
