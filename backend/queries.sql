@@ -15,11 +15,11 @@ SELECT * FROM alunos;
     nome varchar(255),
     morada varchar(255)
 );*/
-DROP TABLE disciplinas;
+-- DROP TABLE disciplinas;
+-- DROP TABLE utilizadores;
 
-DROP TABLE utilizadores;
-DROP TABLE if exists utilizadores;
-DROP TABLE if exists disciplinas;
+-- DROP TABLE if exists utilizadores;
+-- DROP TABLE if exists disciplinas;
 
 CREATE TABLE utilizadores(
 	idUtilizador int NOT NULL AUTO_INCREMENT,
@@ -30,14 +30,13 @@ CREATE TABLE utilizadores(
     PRIMARY KEY (idUtilizador)
 );
 
-
-
 CREATE TABLE disciplinas(
 	idDisciplina int NOT NULL AUTO_INCREMENT,
 	idUtilizador int NOT NULL,
     nome varchar(255) NOT NULL,
     topico varchar(255) NOT NULL,
-    pdf varchar(255) NOT NULL,
+    -- pdf varchar(255) NOT NULL,
+    files blob NOT NULL,
     PRIMARY KEY (idDisciplina),
     FOREIGN KEY (idUtilizador) REFERENCES utilizadores(idUtilizador)
 );
