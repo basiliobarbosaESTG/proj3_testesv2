@@ -1,4 +1,77 @@
-import mysql from 'mysql2'
+const notes =[
+    {
+      id: 1, 
+      title: "A minha primeira Nota",
+      timestamp: Date.now(),  
+      contents:
+      "Ola Pedro Soares ",
+    },
+    {
+      id: 2, 
+      title: "A minha segunda Nota",
+      timestamp: Date.now(),  
+      contents:
+      "Ola Basilio Barbosa ",
+    }
+  ];
+
+
+   function getNotes() {
+    return notes;
+   }
+
+   const _getNotes = getNotes;
+export { _getNotes as getNotes };
+
+   function getNote(id) {
+    return notes.find(note => note.id === id);
+   }
+
+   const _getNote = getNote;
+export { _getNote as getNote };
+   
+   function addNote(note) {
+    
+   }
+   
+   const _addNote = addNote;
+export { _addNote as addNote };
+   
+   function deleteNote(id) {
+
+   }
+
+   const _deleteNote = deleteNote;
+export { _deleteNote as deleteNote };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*import mysql from 'mysql2'
 
 import dotenv from 'dotenv'
 dotenv.config()
@@ -36,7 +109,7 @@ export async function getLogin(id){
 
 export async function createLogin(idUtilizador, username, password) {
     const [result] = await pool.query("INSERT INTO proj3_app.login (idUtilizador, username, password) VALUES (?,?,?)", [idUtilizador, username, password])
-    /*return {idUtilizador: result.insertId,username,password}*/
+    /*return {idUtilizador: result.insertId,username,password}
 
     const id = result.insertId
     return getLogin(id)
@@ -45,3 +118,4 @@ export async function createLogin(idUtilizador, username, password) {
 //const result = await createLogin(4, 'ze', 'ze')
 //console.log(result)
 
+*/
